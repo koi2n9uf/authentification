@@ -9,15 +9,14 @@
       <div class="form-group">
         <label for="password">Password</label>
         <input type="password" id="password" class="form-control" formControlName="password">
-        <p>Make sure there at least 8 characters including a number, a capital letter and a lowercase letter. </p>
+        <small>Make sure there at least 8 characters including a number, a capital letter and a lowercase
+          letter.
+        </small>
 
       </div>
+      <button class="btn btn-primary btn-lg btn-block" type="submit" [disabled]="signUpForm.invalid"> Create an account
+      </button>
+      <p class="text-danger">{{errorMessage}}</p>
     </form>
   </div>
-  <div class="col-sm-8 col-sm-offset-2">
-    <button class="btn btn-primary btn-lg btn-block" type="submit" [disabled]="signUpForm.invalid"> Create an account
-    </button>
-    <p class="text-danger">{{errorMessage}}</p>
-  </div>
-
 </div>
